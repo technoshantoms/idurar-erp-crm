@@ -11,7 +11,9 @@ import { useNavigate } from 'react-router-dom';
 import { selectCurrentAdmin } from '@/redux/auth/selectors';
 
 import useLanguage from '@/locale/useLanguage';
-import { FILE_BASE_URL } from '@/config/serverApiConfig';
+import { BASE_URL } from '@/config/serverApiConfig';
+
+import { checkImage } from '@/request';
 
 const AdminInfo = ({ config }) => {
   const translate = useLanguage();
@@ -20,6 +22,23 @@ const AdminInfo = ({ config }) => {
   const { modal, updatePanel } = profileContextAction;
   const { ENTITY_NAME } = config;
   const currentAdmin = useSelector(selectCurrentAdmin);
+
+  const [hasPhotoprofile, setHasPhotoprofile] = useState(false);
+
+  useEffect(() => {
+    async function fetchData() {
+      if (currentAdmin?.photo) {
+        const result = await checkImage(BASE_URL + currentAdmin?.photo);
+        setHasPhotoprofile(result);
+      }
+    }
+    fetchData();
+    return () => {
+      return false;
+    };
+  }, []);
+
+  const srcImgProfile = hasPhotoprofile ? BASE_URL + currentAdmin?.photo : null;
 
   return (
     <>
@@ -55,15 +74,10 @@ const AdminInfo = ({ config }) => {
       <Row align="middle">
         <Col xs={{ span: 24 }} sm={{ span: 7 }} md={{ span: 5 }}>
           <Avatar
-            className="last left"
-            src={currentAdmin?.photo ? FILE_BASE_URL + currentAdmin?.photo : undefined}
+            className="last left pad5"
+            src={srcImgProfile}
             size={96}
-            style={{
-              color: '#f56a00',
-              backgroundColor: currentAdmin?.photo ? 'none' : '#fde3cf',
-              boxShadow: 'rgba(150, 190, 238, 0.35) 0px 0px 15px 3px',
-              fontSize: '48px',
-            }}
+            style={{ color: '#f56a00', backgroundColor: '#fde3cf', fontSize: '48px' }}
             alt={`${currentAdmin?.name}`}
           >
             {currentAdmin?.name.charAt(0).toUpperCase()}
