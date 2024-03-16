@@ -22,7 +22,7 @@ async function setupApp() {
       name: 'IDURAR',
       surname: 'Admin',
       enabled: true,
-      role: 'owner',
+      role: 'admin',
     };
     const result = await new Admin(demoAdmin).save();
 
