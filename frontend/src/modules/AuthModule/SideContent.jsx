@@ -22,18 +22,23 @@ export default function SideContent() {
           src={logo}
           alt="IDURAR ERP CRM"
           style={{ margin: '0 auto 40px', display: 'block' }}
-          height={140}
-          width={330}
+          height={63}
+          width={220}
         />
         <div className="space40"></div>
-        <Title level={3}>Create account</Title>
+        <Title level={3}>Save on Homepesa SACCO, Borrow 7X your savings:</Title>
         <div className="space20"></div>
         <ul className="list-checked">
           <li className="list-checked-item">
             <Space direction="vertical">
               <Text strong>{translate('All-in-one tool')}</Text>
 
-              <Text>Horticultural supplies.. </Text>
+              <Text>Homepesa SACCO, a back office licensed Sacco, 
+              enables its affiliate companies' members to register 
+              online at its website 🌐www.homesako.com to save and 
+              borrow loans. Besides, its members can utilize its 
+              inbuild ERP-CRM capabilities to better run their businesses,
+               while digitally remitting TAXES as per the laws of Kenya.</Text>
             </Space>
           </li>
 
