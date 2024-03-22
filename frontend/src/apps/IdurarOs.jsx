@@ -24,7 +24,7 @@ export default function IdurarOs() {
   const { isLoggedIn } = useSelector(selectAuth);
 
   console.log(
-    '🚀 Welcome to homesako.com'
+    '🚀 Welcome to Satia Technologies. www.saltiam.com'
   );
 
   // // Online state

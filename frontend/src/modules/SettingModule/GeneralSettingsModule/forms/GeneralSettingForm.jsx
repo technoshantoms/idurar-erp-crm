@@ -50,13 +50,6 @@ const langDirection=useSelector(selectLangDirection)
         </Select>
       </Form.Item>
       <Form.Item
-        label={translate('Allow Registration')}
-        name="idurar_registration_allowed"
-        valuePropName="checked"
-      >
-        <Switch checkedChildren={<CheckOutlined />} unCheckedChildren={<CloseOutlined />} />
-      </Form.Item>
-      <Form.Item
         label={translate('country')}
         name="idurar_app_country"
         rules={[

@@ -181,7 +181,7 @@ export default function HeaderContent() {
 
       {/* <AppsButton /> */}
 
-      <UpgradeButton />
+      { /* <UpgradeButton /> */}
 
       <SelectLanguage />
 

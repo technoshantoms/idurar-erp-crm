@@ -12,7 +12,7 @@ exports.currencyList = [
   },
   {
     currency_symbol: '€',
-    currency_position: 'after',
+    currency_position: 'before',
     decimal_sep: '.',
     thousand_sep: ' ',
     cent_precision: 2,

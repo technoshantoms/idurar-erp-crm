@@ -1,12 +1,16 @@
 import { Space, Layout, Divider, Typography } from 'antd';
 import logo from '@/style/images/idurar-crm-erp.svg';
 import useLanguage from '@/locale/useLanguage';
+import { useSelector } from 'react-redux';
+import { selectLangDirection } from '@/redux/translate/selectors';
 
 const { Content } = Layout;
 const { Title, Text } = Typography;
 
 export default function SideContent() {
   const translate = useLanguage();
+  const langDirection = useSelector(selectLangDirection)
+
   return (
     <Content
       style={{
@@ -26,23 +30,19 @@ export default function SideContent() {
           width={220}
         />
         <div className="space40"></div>
-        <Title level={3}>Save on Homepesa SACCO, Borrow 7X your savings:</Title>
+        <Title level={3}>{translate('Manage your company with')} :</Title>
+
         <div className="space20"></div>
-        <ul className="list-checked">
-          <li className="list-checked-item">
+        <ul className="list-checked" style={{paddingRight:0}}>
+          <li className={`list-checked-item ${langDirection === "rtl" ? "list-checked-item-right" : "list-checked-item-left"}`}>
             <Space direction="vertical">
               <Text strong>{translate('All-in-one tool')}</Text>
 
-              <Text>Homepesa SACCO, a back office licensed Sacco, 
-              enables its affiliate companies' members to register 
-              online at its website 🌐www.homesako.com to save and 
-              borrow loans. Besides, its members can utilize its 
-              inbuild ERP-CRM capabilities to better run their businesses,
-               while digitally remitting TAXES as per the laws of Kenya.</Text>
+              <Text>{translate('Run and scale your ERP CRM Apps')}</Text>
             </Space>
           </li>
 
-          <li className="list-checked-item">
+          <li className={`list-checked-item ${langDirection === "rtl" ? "list-checked-item-right" : "list-checked-item-left"}`}>
             <Space direction="vertical">
               <Text strong>{translate('Easily add and manage your services')}</Text>
               <Text>{translate('It brings together your invoice clients and leads')}</Text>

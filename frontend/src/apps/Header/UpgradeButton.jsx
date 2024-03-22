@@ -15,7 +15,7 @@ export default function UpgradeButton() {
         <Button
           type="primary"
           onClick={() => {
-            window.open(`https://www.idurarapp.com/contact-us/`);
+            window.open(`https://www.acloudbank.com/`);
           }}
         >
           {translate('Contact us')}
@@ -42,6 +42,3 @@ export default function UpgradeButton() {
   );
 }
 
-//  console.log(
-//    '🚀 Welcome to IDURAR ERP CRM! Did you know that we also offer commercial customization services? Contact us at hello@idurarapp.com for more information.'
-//  );
