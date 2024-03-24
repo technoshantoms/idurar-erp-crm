@@ -1,0 +1,2 @@
+(this["webpackJsonperp-crm"]=this["webpackJsonperp-crm"]||[]).push([[19],{186:function(e,r,n){"use strict";n.r(r),n.d(r,"default",(function(){return c}));var t=n(5);function c(){return Object(t.jsx)("p",{children:"General Settings here"})}}}]);
+//# sourceMappingURL=Settings-GeneralSettings.3bc78b29.chunk.js.map

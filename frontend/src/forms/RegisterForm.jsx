@@ -19,7 +19,11 @@ export default function RegisterForm({ userLocation }) {
           },
         ]}
       >
-        <Input prefix={<UserOutlined className="site-form-item-icon" />} size="large" />
+        <Input prefix={<UserOutlined className="site-form-item-icon" />} 
+         size="large" 
+         placeholder={translate('name')}
+        />
+
       </Form.Item>
       <Form.Item
         name="email"
@@ -35,6 +39,7 @@ export default function RegisterForm({ userLocation }) {
       >
         <Input
           prefix={<MailOutlined className="site-form-item-icon" />}
+          placeholder={translate('email')}
           type="email"
           size="large"
         />
@@ -48,7 +53,9 @@ export default function RegisterForm({ userLocation }) {
           },
         ]}
       >
-        <Input.Password prefix={<LockOutlined className="site-form-item-icon" />} size="large" />
+        <Input.Password prefix={<LockOutlined className="site-form-item-icon" />} size="large" 
+        placeholder={translate('password')}
+        />
       </Form.Item>
       {/* <Form.Item
         name="confirm_password"
