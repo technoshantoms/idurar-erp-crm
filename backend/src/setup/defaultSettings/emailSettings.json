@@ -2,19 +2,19 @@
   {
     "settingCategory": "email_settings",
     "settingKey": "email_domain",
-    "settingValue": "idurarapp.com",
+    "settingValue": "cigniti.com",
     "valueType": "string"
   },
   {
     "settingCategory": "email_settings",
     "settingKey": "email_reply_to",
-    "settingValue": "reply@idurarapp.com",
+    "settingValue": "reply@cigniti.com",
     "valueType": "string"
   },
   {
     "settingCategory": "email_settings",
     "settingKey": "email_from",
-    "settingValue": "IDURAR ERP CRM",
+    "settingValue": "CIGNITI ERP CRM",
     "valueType": "string"
   }
 ]

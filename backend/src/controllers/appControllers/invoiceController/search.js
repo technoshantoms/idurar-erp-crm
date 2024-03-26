@@ -2,6 +2,7 @@ const { migrate } = require('./migrate');
 
 const search = async (Model, req, res) => {
   // debugger;
+  // console.log(Model, req, res);
   // console.log("you are here");
   // console.log(req.query.fields)
   // if (req.query.q === undefined || req.query.q.trim() === '') {
@@ -14,14 +15,15 @@ const search = async (Model, req, res) => {
   //     })
   //     .end();
   // }
-  const fieldsArray = req.query.fields ? req.query.fields.split(',') : ['name'];
+  // const fieldsArray = req.query.fields ? req.query.fields.split(',') : ['total'];
+  const fieldsArray =  ['total'];
 
   const fields = { $or: [] };
 
   for (const field of fieldsArray) {
     fields.$or.push({ [field]: { $regex: new RegExp(req.query.q, 'i') } });
   }
-  // console.log(fields)
+  console.log(fields)
 
   let results = await Model.find({
     ...fields,

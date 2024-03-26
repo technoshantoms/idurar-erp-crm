@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const paymentSchema = new mongoose.Schema({
+const creditSchema = new mongoose.Schema({
   removed: {
     type: Boolean,
     default: false,
@@ -17,12 +17,14 @@ const paymentSchema = new mongoose.Schema({
     autopopulate: true,
     required: true,
   },
-  invoice: [{
-    type: mongoose.Schema.ObjectId,
-    ref: 'Invoice',
-    required: true,
-    autopopulate: true,
-  }],
+  invoice: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: 'Invoice',
+      required: true,
+      autopopulate: true,
+    },
+  ],
   date: {
     type: Date,
     default: Date.now,
@@ -57,5 +59,5 @@ const paymentSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
-paymentSchema.plugin(require('mongoose-autopopulate'));
-module.exports = mongoose.model('Payment', paymentSchema);
+creditSchema.plugin(require('mongoose-autopopulate'));
+module.exports = mongoose.model('Credit', creditSchema);

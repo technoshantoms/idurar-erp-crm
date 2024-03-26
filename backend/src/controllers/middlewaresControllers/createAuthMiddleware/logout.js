@@ -18,7 +18,7 @@ const logout = async (req, res, { userModel }) => {
       sameSite: 'none',
       httpOnly: true,
       secure: true,
-      domain: req.hostname,
+      // domain: 'https://flourishing-lebkuchen-cigniti.netlify.app/', // TODO: Make this dynamic based on environment
       Path: '/',
     })
     .json({

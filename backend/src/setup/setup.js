@@ -19,10 +19,10 @@ async function setupApp() {
 
     const demoAdmin = {
       email: 'admin@demo.com',
-      name: 'IDURAR',
+      name: 'CIGNITI',
       surname: 'Admin',
       enabled: true,
-      role: 'admin',
+      role: 'owner',
     };
     const result = await new Admin(demoAdmin).save();
 

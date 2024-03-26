@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Model = mongoose.model('Payment');
+const Model = mongoose.model('Credit');
 const Invoice = mongoose.model('Invoice');
 const custom = require('@/controllers/pdfController');
 
@@ -43,7 +43,7 @@ const create = async (req, res) => {
 
   const result = await Model.create(req.body);
 
-  const fileId = 'payment-' + result._id + '.pdf';
+  const fileId = 'credit-' + result._id + '.pdf';
   const updatePath = await Model.findOneAndUpdate(
     {
       _id: result._id.toString(),
