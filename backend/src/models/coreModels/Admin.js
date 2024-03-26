@@ -8,9 +8,9 @@ const adminSchema = new Schema({
   },
   enabled: {
     type: Boolean,
-    default: false,
+    default: true,
   },
-
+  branchs: [{ type: mongoose.Schema.ObjectId, ref: 'Branch' }],
   email: {
     type: String,
     lowercase: true,
@@ -29,7 +29,7 @@ const adminSchema = new Schema({
   },
   role: {
     type: String,
-    default: 'employee',
+    default: 'owner',
     enum: ['owner', 'admin', 'manager', 'employee', 'create_only', 'read_only'],
   },
 });
