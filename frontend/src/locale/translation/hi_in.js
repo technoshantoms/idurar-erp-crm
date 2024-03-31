@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "नई कर जोड़ें",
 account_owner: "खाता मालिक",
 create_only: "केवल बनाएं",
 enter_code: "कोड दर्ज करें",
-search:"खोज"
 }
  export default lang

@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "Shto Takse të Re",
 account_owner: "Pronari i llogarisë",
 create_only: "Krijo vetëm",
 enter_code: "Vendosni kodin",
-search:"kërkimi"
 }
  export default lang

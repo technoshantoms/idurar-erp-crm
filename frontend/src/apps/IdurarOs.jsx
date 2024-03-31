@@ -1,12 +1,12 @@
-import { lazy, Suspense, useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 
-import { useSelector } from 'react-redux';
-import { selectAuth } from '@/redux/auth/selectors';
 import { AppContextProvider } from '@/context/appContext';
-import PageLoader from '@/components/PageLoader';
 import AuthRouter from '@/router/AuthRouter';
 import Localization from '@/locale/Localization';
+import PageLoader from '@/components/PageLoader';
 import { notification } from 'antd';
+import { selectAuth } from '@/redux/auth/selectors';
+import { useSelector } from 'react-redux';
 
 const ErpApp = lazy(() => import('./ErpApp'));
 
@@ -24,7 +24,7 @@ export default function IdurarOs() {
   const { isLoggedIn } = useSelector(selectAuth);
 
   console.log(
-    '🚀 Welcome to Satia Technologies. www.saltiam.com'
+    '🚀 Welcome to Satia ltd. Contact us at https://www.saltiam.com/ for more information.'
   );
 
   // // Online state

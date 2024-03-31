@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "Yeni vergi əlavə et",
 account_owner: "Hesab Sahibi",
 create_only: "Yalnızca Yarat",
 enter_code: "Kod Girin",
-search:"axtarış"
 }
  export default lang

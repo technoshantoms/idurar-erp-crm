@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "Dodaj novi porez",
 account_owner: "Vlasnik računa",
 create_only: "Samo kreiranje",
 enter_code: "Unesite kod",
-search:"Претрага"
 }
  export default lang

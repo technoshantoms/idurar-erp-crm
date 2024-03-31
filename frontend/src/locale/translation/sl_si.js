@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "Dodaj novo davčno stopnjo",
 account_owner: "Lastnik računa",
 create_only: "Samo ustvarjanje",
 enter_code: "Vnesite kodo",
-search:"Iskanje"
 }
  export default lang

@@ -231,7 +231,7 @@ total: "Totali",
 status: "Statu",
 invoices_preview: "Invoices Preview",
 quotes_preview: "Quotes Preview",
-offers_preview: "Offers Preview",
+offers_preview: "Discounts Preview",
 payments_preview: "Payments Preview",
 this_month: "Dan ix-Xahar",
 unpaid: "Mhux Mħallas",
@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "Żid Taxxa Ġdida",
 account_owner: "Proprietarju tal-Kont",
 create_only: "Żieda Biss",
 enter_code: "Daħħal Ċikklu",
-search:"tfittxija"
 }
  export default lang

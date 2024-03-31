@@ -1,10 +1,9 @@
-import { Avatar, Popover, Button, Badge } from 'antd';
-
-// import Notifications from '@/components/Notification';
+import { Avatar, Badge, Button, Popover } from 'antd';
 
 import { RocketOutlined } from '@ant-design/icons';
-
 import useLanguage from '@/locale/useLanguage';
+
+// import Notifications from '@/components/Notification';
 
 export default function UpgradeButton() {
   const translate = useLanguage();
@@ -15,7 +14,7 @@ export default function UpgradeButton() {
         <Button
           type="primary"
           onClick={() => {
-            window.open(`https://www.acloudbank.com/`);
+            window.open(`https://www.cigniti.com/contact-us/`);
           }}
         >
           {translate('Contact us')}
@@ -42,3 +41,6 @@ export default function UpgradeButton() {
   );
 }
 
+//  console.log(
+//    '🚀 Welcome to CIGNITI ERP CRM! Did you know that we also offer commercial customization services? Contact us at https://www.cigniti.com/ for more information.'
+//  );

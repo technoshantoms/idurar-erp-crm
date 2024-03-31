@@ -1,5 +1,6 @@
-import { Space, Layout, Divider, Typography } from 'antd';
-import logo from '@/style/images/idurar-crm-erp.svg';
+import { Divider, Layout, Space, Typography } from 'antd';
+
+import logo from '@/style/images/Cigniti-New-Logo.png';
 import useLanguage from '@/locale/useLanguage';
 
 const { Content } = Layout;
@@ -20,21 +21,20 @@ export default function SideContent() {
       <div style={{ width: '100%' }}>
         <img
           src={logo}
-          alt="IDURAR ERP CRM"
+          alt="CIGNITI ERP CRM"
           style={{ margin: '0 auto 40px', display: 'block' }}
-          height={140}
-          width={330}
+          height={63}
+          width={220}
         />
-         <div className="space40"></div>
-        <Title level={3}>Homepesa (CLOUD HOSTED) is open for use by companies, churches, & and SACCOs</Title>
+        <div className="space40"></div>
+        <Title level={3}>Homepesa (CLOUD HOSTED) is open for use by companies, churches, & and SACCOs:</Title>
         <div className="space20"></div>
         <ul className="list-checked">
           <li className="list-checked-item">
             <Space direction="vertical">
               <Text strong>{translate('All-in-one tool')}</Text>
 
-              <Text>This multi-currency paymeny,erp, & crm software is mainatined by: www.saltiam.com  
-              </Text>
+              <Text>This multi-currency paymeny,erp, & crm software is mainatined by: www.saltiam.com}</Text>
             </Space>
           </li>
 
@@ -52,6 +52,66 @@ export default function SideContent() {
             justifyContent: 'space-between',
           }}
         >
+          {/* <img
+            src={logo1}
+            alt="Logo1"
+            style={{
+              margin: '0 15px',
+              display: 'block',
+              float: 'left',
+              width: '48px',
+              filter: 'grayscale(1)',
+              mixBlendMode: 'multiply',
+              opacity: '0.8',
+            }}
+            height={48}
+            width={48}
+          />
+          <img
+            src={logo2}
+            alt="Logo2"
+            style={{
+              margin: '0 15px',
+              display: 'block',
+              float: 'left',
+              width: '48px',
+              filter: 'grayscale(1)',
+              mixBlendMode: 'multiply',
+              opacity: '0.8',
+            }}
+            height={48}
+            width={48}
+          />
+          <img
+            src={logo3}
+            alt="Logo3"
+            style={{
+              margin: '0 15px',
+              display: 'block',
+              float: 'left',
+              width: '48px',
+              filter: 'grayscale(1)',
+              mixBlendMode: 'multiply',
+              opacity: '0.8',
+            }}
+            height={48}
+            width={48}
+          />
+          <img
+            src={logo4}
+            alt="Logo4"
+            style={{
+              margin: '0 15px',
+              display: 'block',
+              float: 'left',
+              width: '48px',
+              filter: 'grayscale(1)',
+              mixBlendMode: 'multiply',
+              opacity: '0.8',
+            }}
+            height={48}
+            width={48}
+          /> */}
         </div>
       </div>
     </Content>

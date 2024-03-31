@@ -1,22 +1,17 @@
+import { Col, Row, Tag } from 'antd';
 import { useEffect, useState } from 'react';
 
-import { Tag, Row, Col } from 'antd';
-import useLanguage from '@/locale/useLanguage';
-
-import { useMoney } from '@/settings';
-
-import { request } from '@/request';
-import useFetch from '@/hooks/useFetch';
-import useOnFetch from '@/hooks/useOnFetch';
-import { tagColor } from '@/utils/statusTagColor';
-
-import RecentTable from './components/RecentTable';
-
-import SummaryCard from './components/SummaryCard';
-import PreviewCard from './components/PreviewCard';
 import CustomerPreviewCard from './components/CustomerPreviewCard';
-
+import PreviewCard from './components/PreviewCard';
+import RecentTable from './components/RecentTable';
+import SummaryCard from './components/SummaryCard';
+import { request } from '@/request';
 import { selectMoneyFormat } from '@/redux/settings/selectors';
+import { tagColor } from '@/utils/statusTagColor';
+import useFetch from '@/hooks/useFetch';
+import useLanguage from '@/locale/useLanguage';
+import { useMoney } from '@/settings';
+import useOnFetch from '@/hooks/useOnFetch';
 import { useSelector } from 'react-redux';
 
 export default function DashboardModule() {
@@ -66,15 +61,20 @@ export default function DashboardModule() {
     {
       title: translate('number'),
       dataIndex: 'number',
+      defaultSortOrder: 'descend',
+      sorter: (a, b) => a.number - b.number,
     },
     {
       title: translate('Client'),
       dataIndex: ['client', 'name'],
+      sorter: (a, b) => a.client - b.client,
     },
 
     {
       title: translate('Total'),
       dataIndex: 'total',
+      sorter: (a, b) => a.total - b.total,
+      ellipsis: true,
       onCell: () => {
         return {
           style: {
@@ -149,6 +149,13 @@ export default function DashboardModule() {
             data={invoiceResult?.total}
           />
           <SummaryCard
+            title={translate('Receipts')}
+            tagColor={'yellow'}
+            prefix={translate('This month')}
+            isLoading={quoteLoading}
+            data={quoteResult?.total}
+          />
+          <SummaryCard
             title={translate('proforma invoices')}
             tagColor={'purple'}
             prefix={translate('This month')}
@@ -156,7 +163,7 @@ export default function DashboardModule() {
             data={quoteResult?.total}
           />
           <SummaryCard
-            title={translate('offers')}
+            title={translate('Discounts')}
             tagColor={'green'}
             prefix={translate('This month')}
             isLoading={offerLoading}

@@ -9,7 +9,7 @@ const schema = new mongoose.Schema({
     type: Boolean,
     default: true,
   },
-
+ branchs: [{ type: mongoose.Schema.ObjectId, ref: 'Branch' }],
   productCategory: {
     type: mongoose.Schema.ObjectId,
     ref: 'ProductCategory',

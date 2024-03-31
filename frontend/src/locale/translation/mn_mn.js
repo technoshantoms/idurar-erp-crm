@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "Өөрийнхөөтэй татвар нэмэх",
 account_owner: "Акаунт холбоо",
 create_only: "Зөвхөн үүсгэх",
 enter_code: "Кодоо оруулна уу",
-search:"хайх"
 }
  export default lang

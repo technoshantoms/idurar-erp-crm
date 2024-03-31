@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "إضافة ضريبة جديدة",
 account_owner: "صاحب الحساب",
 create_only: "إنشاء فقط",
 enter_code: "أدخل الكود",
-search:"بحث"
 }
  export default lang

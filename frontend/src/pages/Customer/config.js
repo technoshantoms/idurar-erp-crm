@@ -15,11 +15,15 @@ export const fields = {
   },
   country: {
     type: 'country',
-    // color: 'red',
+    color: 'red',
     disableForForm: true,
   },
   phone: {
     type: 'phone',
+    disableForForm: true,
+  },
+  Address: {
+    type: 'address',
     disableForForm: true,
   },
   email: {

@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "Nieuwe Belasting Toevoegen",
 account_owner: "Account Eigenaar",
 create_only: "Alleen Creëren",
 enter_code: "Code invoeren",
-search:"zoekopdracht"
 }
  export default lang

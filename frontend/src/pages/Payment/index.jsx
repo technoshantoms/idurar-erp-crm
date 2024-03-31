@@ -1,8 +1,9 @@
+import { Radio, Space, Table, Tag } from 'antd';
+import { useDate, useMoney } from '@/settings';
+
+import PaymentDataTableModule from '@/modules/PaymentModule/PaymentDataTableModule';
 import dayjs from 'dayjs';
 import useLanguage from '@/locale/useLanguage';
-import PaymentDataTableModule from '@/modules/PaymentModule/PaymentDataTableModule';
-
-import { useMoney, useDate } from '@/settings';
 
 export default function Payment() {
   const translate = useLanguage();
@@ -18,8 +19,7 @@ export default function Payment() {
   const deleteModalLabels = ['number'];
   const dataTableColumns = [
     {
-      title: translate('Number'),
-
+      title: translate('Payment No.'),
       dataIndex: 'number',
     },
     {
@@ -49,8 +49,20 @@ export default function Payment() {
       },
     },
     {
-      title: translate('Number'),
+      title: translate('INV. No.'),
       dataIndex: ['invoice', 'number'],
+      render: (invoice, record) => (
+        <span>
+          {record.invoice.map((tag) => {
+            console.log('tag._id', tag._id);
+            return (
+              <Tag color={'green'} key={tag._id}>
+                {tag.number}
+              </Tag>
+            );
+          })}
+        </span>
+      ),
     },
     {
       title: translate('year'),
@@ -77,7 +89,7 @@ export default function Payment() {
   };
   const config = {
     ...configPage,
-    disableAdd: true,
+    disableAdd: false,
     dataTableColumns,
     searchConfig,
     deleteModalLabels,

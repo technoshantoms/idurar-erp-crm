@@ -234,7 +234,7 @@ const lang = {
   status: 'Status',
   invoices_preview: 'Invoices Preview',
   quotes_preview: 'Quotes Preview',
-  offers_preview: 'Offers Preview',
+  offers_preview: 'Discounts Preview',
   payments_preview: 'Payments Preview',
   this_month: 'This Month',
   unpaid: 'Unpaid',
@@ -247,6 +247,7 @@ const lang = {
   download: 'Download',
   draft: 'Draft',
   pending: 'Pending',
+  compleated:'Compleated',
   sent: 'Sent',
   declined: 'Declined',
   accepted: 'Accepted',
@@ -329,7 +330,8 @@ const lang = {
   firstname: 'Firstname',
   lastname: 'Lastname',
   company_list: 'Company List',
-  contact: 'Contact',
+  contact: 'Contact Person',
+  address:'Address',
   website: 'Website',
   lead_list: 'Lead List',
   add_new_lead: 'Add New Lead',
@@ -433,7 +435,7 @@ const lang = {
   contact_us: 'Contact Us',
   customers: 'Customers',
   peoples: 'Peoples',
-  companies: 'Companies',
+  companies: 'Enquiries',
   leads: 'Leads',
   offer_leads: 'Offer Leads',
   invoices: 'Invoices',
@@ -447,9 +449,8 @@ const lang = {
   account_owner: 'Account Owner',
   create_only: 'Create Only',
   enter_code: 'Enter Code',
-  offers: 'Offers',
+  offers: 'Discounts',
   proforma_invoices: 'Proforma Invoices',
-  search:"search"
 };
 
 export default lang;

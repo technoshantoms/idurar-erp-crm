@@ -1,22 +1,17 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AppstoreOutlined, LogoutOutlined, SettingOutlined } from '@ant-design/icons';
 import { Avatar, Dropdown, Layout } from 'antd';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
+import AppsButton from './AppsButton';
+import ChooseCurrency from '@/components/ChooseCurrency';
+import { FILE_BASE_URL } from '@/config/serverApiConfig';
+import SelectLanguage from '@/components/SelectLanguage';
+import UpgradeButton from './UpgradeButton';
+import { selectCurrentAdmin } from '@/redux/auth/selectors';
+import useLanguage from '@/locale/useLanguage';
 
 // import Notifications from '@/components/Notification';
-
-import { SettingOutlined, LogoutOutlined, AppstoreOutlined, ToolOutlined, UserOutlined } from '@ant-design/icons';
-
-import { selectCurrentAdmin } from '@/redux/auth/selectors';
-
-import { FILE_BASE_URL } from '@/config/serverApiConfig';
-
-import useLanguage from '@/locale/useLanguage';
-import SelectLanguage from '@/components/SelectLanguage';
-import ChooseCurrency from '@/components/ChooseCurrency';
-
-import UpgradeButton from './UpgradeButton';
-import AppsButton from './AppsButton';
-import { selectLangDirection } from '@/redux/translate/selectors';
 
 export default function HeaderContent() {
   const currentAdmin = useSelector(selectCurrentAdmin);
@@ -55,58 +50,7 @@ export default function HeaderContent() {
   const DropdownMenu = ({ text }) => {
     return <span style={{}}>{text}</span>;
   };
- const PaypalButton = () => {
-    useEffect(() => {
-      const script = document.createElement('script');
-      script.src =
-        'https://www.paypal.com/sdk/js?client-id=AXy1YZNZsMCdiYVhh_jyoYW9_HkylFwgkL75WNGw924gL4jHcW5myCTH5JGOyyMiuZSabMWpovoarBnQ&vault=true&intent=subscription';
-      script.async = true;
 
-      script.onload = () => {
-        paypal
-          .Buttons({
-            style: {
-              shape: 'rect',
-              color: 'blue',
-              layout: 'vertical',
-              label: 'paypal',
-            },
-            createSubscription: function (data, actions) {
-              return actions.subscription.create({
-                /* Creates the subscription */
-                plan_id: 'P-6NV451935K3609258MV3DRUQ',
-              });
-            },
-            onApprove: function (data, actions) {
-              alert(data.subscriptionID); // You can add optional success message for the subscriber here
-            },
-          })
-          .render('#paypal-button-container-P-6NV451935K3609258MV3DRUQ'); // Renders the PayPal button
-      };
-
-      document.body.appendChild(script);
-
-      return () => {
-        document.body.removeChild(script);
-      };
-    }, []);
-
-    return <div id="paypal-button-container-P-6NV451935K3609258MV3DRUQ"></div>;
-  };
-
-  const content = () => {
-    return (
-      <div className="pad10">
-        <p style={{ fontSize: 12 }}>{translate('Upgrade For LIFETIME Time membership Plan')} : KSK 3000</p>
-        <p style={{ fontSize: 12 }}>{translate('Plus 1 year free crm and erp services')}</p>
-        <p style={{ fontSize: 14, fontWeight: 900 }}>{translate('Basic membership Fee')} : KSH 1000</p>
-        <p style={{ fontSize: 12 }}>
-          {translate('Cancel Basic membership any time while keep using SACCO free modules for ever')}
-        </p>
-        <PaypalButton />
-      </div>
-    );
-  };
   const items = [
     {
       label: <ProfileDropdown className="headerDropDownMenu" />,
@@ -116,7 +60,7 @@ export default function HeaderContent() {
       type: 'divider',
     },
     {
-      icon: <UserOutlined />,
+      icon: <SettingOutlined />,
       key: 'settingProfile',
       label: (
         <Link to={'/profile'}>
@@ -125,7 +69,7 @@ export default function HeaderContent() {
       ),
     },
     {
-      icon: <ToolOutlined />,
+      icon: <SettingOutlined />,
       key: 'settingApp',
       label: <Link to={'/settings'}>{translate('app_settings')}</Link>,
     },
@@ -140,16 +84,14 @@ export default function HeaderContent() {
       label: <Link to={'/logout'}>{translate('logout')}</Link>,
     },
   ];
-
-  const langDirection=useSelector(selectLangDirection)
   return (
     <Header
       style={{
         padding: '20px',
         background: '#f9fafc',
-        display: 'flex',
-        flexDirection: langDirection==="rtl"?"row":'row-reverse',
-        justifyContent: 'flex-start',
+        display: ' flex',
+        flexDirection: ' row-reverse',
+        justifyContent: ' flex-start',
         gap: ' 15px',
       }}
     >
@@ -179,9 +121,8 @@ export default function HeaderContent() {
         {/* </Badge> */}
       </Dropdown>
 
-      {/* <AppsButton /> */}
+      {/* <AppsButton UpgradeButton /> */}
 
-      { /* <UpgradeButton /> */}
 
       <SelectLanguage />
 
@@ -191,5 +132,5 @@ export default function HeaderContent() {
 }
 
 //  console.log(
-//    '🚀 Welcome to IDURAR ERP CRM! Did you know that we also offer commercial customization services? Contact us at hello@idurarapp.com for more information.'
+//    '🚀 Welcome to CIGNITI ERP CRM! Did you know that we also offer commercial customization services? Contact us at https://www.cigniti.com/ for more information.'
 //  );

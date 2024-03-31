@@ -6,7 +6,7 @@ export const fields = {
   mainContact: {
     type: 'search',
     renderAsTag: true,
-    label: 'Contact',
+    label: 'Contact Person',
     entity: 'people',
     redirectLabel: 'Add New Person',
     withRedirect: true,
@@ -27,6 +27,9 @@ export const fields = {
   },
   website: {
     type: 'url',
+  },
+  address: {
+    type: 'string',
   },
   // legalName: {
   //   type: 'string',
@@ -97,9 +100,6 @@ export const fields = {
   // location: {
   //   latitude: Number,
   //   longitude: Number,
-  // },
-  // address: {
-  //   type: 'string',
   // },
   // city: {
   //   type: 'string',

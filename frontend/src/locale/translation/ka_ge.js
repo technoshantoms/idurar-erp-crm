@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "ახალი გადახდის დამ�
 account_owner: "ანგარიშის მფლობელი",
 create_only: "მხოლოდ შექმნა",
 enter_code: "კოდის შეყვარება",
-search:"ძებნა"
 }
  export default lang

@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "Adăugați o nouă taxă",
 account_owner: "Proprietar de cont",
 create_only: "Doar Creare",
 enter_code: "Introduceți Codul",
-search:"căutare"
 }
  export default lang

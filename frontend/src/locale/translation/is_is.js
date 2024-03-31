@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "Bæta við nýjum skatti",
 account_owner: "Reiknings eigandi",
 create_only: "Búa til einungis",
 enter_code: "Sláðu inn kóða",
-search:"leit"
 }
  export default lang

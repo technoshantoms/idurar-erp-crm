@@ -16,10 +16,9 @@ import calculate from '@/utils/calculate';
 import { generate as uniqueId } from 'shortid';
 
 import Loading from '@/components/Loading';
-import { ArrowLeftOutlined, ArrowRightOutlined, CloseCircleOutlined, PlusOutlined } from '@ant-design/icons';
+import { CloseCircleOutlined, PlusOutlined } from '@ant-design/icons';
 
 import { useNavigate } from 'react-router-dom';
-import { selectLangDirection } from '@/redux/translate/selectors';
 
 function SaveForm({ form }) {
   const translate = useLanguage();
@@ -100,15 +99,13 @@ export default function CreateItem({ config, CreateForm }) {
     }
     dispatch(erp.create({ entity, jsonData: fieldsValue }));
   };
-const langDirection=useSelector(selectLangDirection)
+
   return (
     <>
       <PageHeader
         onBack={() => {
           navigate(`/${entity.toLowerCase()}`);
         }}
-        backIcon={langDirection==="rtl"?<ArrowRightOutlined/>:<ArrowLeftOutlined />}
-
         title={translate('New')}
         ghost={false}
         tags={<Tag>{translate('Draft')}</Tag>}

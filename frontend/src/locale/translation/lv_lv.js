@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "Pievienot jaunu nodokli",
 account_owner: "Konta īpašnieks",
 create_only: "Izveidot tikai",
 enter_code: "Ievadiet kodu",
-search:"Meklēt"
 }
  export default lang

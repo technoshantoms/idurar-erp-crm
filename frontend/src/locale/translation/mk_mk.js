@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "Додади нов данок",
 account_owner: "Сопственик на сметка",
 create_only: "Само креирај",
 enter_code: "Внеси код",
-search:"пребарување"
 }
  export default lang

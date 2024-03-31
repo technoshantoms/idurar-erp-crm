@@ -1,12 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
+import { Empty, Select } from 'antd';
+import { useEffect, useRef, useState } from 'react';
 
 import { request } from '@/request';
-import useOnFetch from '@/hooks/useOnFetch';
 import useDebounce from '@/hooks/useDebounce';
-import { useNavigate } from 'react-router-dom';
-
-import { Select, Empty } from 'antd';
 import useLanguage from '@/locale/useLanguage';
+import { useNavigate } from 'react-router-dom';
+import useOnFetch from '@/hooks/useOnFetch';
 
 export default function AutoCompleteAsync({
   entity,
@@ -112,34 +111,38 @@ export default function AutoCompleteAsync({
   }, [value]);
 
   return (
-    <Select
-      loading={isLoading}
-      showSearch
-      allowClear
-      placeholder={translate('Search')}
-      defaultActiveFirstOption={false}
-      filterOption={false}
-      notFoundContent={searching ? '... Searching' : <Empty />}
-      value={currentValue}
-      onSearch={onSearch}
-      onClear={() => {
-        // setOptions([]);
-        // setCurrentValue(undefined);
-        setSearching(false);
-      }}
-      onChange={handleSelectChange}
-      style={{ minWidth: '220px' }}
-      // onSelect={handleOnSelect}
-    >
-      {selectOptions.map((optionField) => (
-        <Select.Option
-          key={optionField[outputValue] || optionField}
-          value={optionField[outputValue] || optionField}
-        >
-          {labels(optionField)}
-        </Select.Option>
-      ))}
-      {withRedirect && <Select.Option value={addNewValue.value}>{addNewValue.label}</Select.Option>}
-    </Select>
+    <div>
+      <Select
+        loading={isLoading}
+        showSearch
+        allowClear
+        placeholder={translate('Search')}
+        defaultActiveFirstOption={false}
+        filterOption={false}
+        notFoundContent={searching ? '... Searching' : <Empty />}
+        value={currentValue}
+        onSearch={onSearch}
+        onClear={() => {
+          // setOptions([]);
+          // setCurrentValue(undefined);
+          setSearching(false);
+        }}
+        onChange={handleSelectChange}
+        style={{ minWidth: '220px' }}
+        // onSelect={handleOnSelect}
+      >
+        {selectOptions.map((optionField) => (
+          <Select.Option
+            key={optionField[outputValue] || optionField}
+            value={optionField[outputValue] || optionField}
+          >
+            {labels(optionField)}
+          </Select.Option>
+        ))}
+        {withRedirect && (
+          <Select.Option value={addNewValue.value}>{addNewValue.label}</Select.Option>
+        )}
+      </Select>
+    </div>
   );
 }

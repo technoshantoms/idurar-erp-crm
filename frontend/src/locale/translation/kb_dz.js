@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "Rnu Asebter Aṭas Amezruy",
 account_owner: "Tasrafutt n Ufig",
 create_only: "Yernu Tansa",
 enter_code: "Sutten Taseddawit",
-search:"Paieška"
 }
  export default lang

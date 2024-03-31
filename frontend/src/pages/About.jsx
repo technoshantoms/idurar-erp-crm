@@ -7,14 +7,13 @@ const About = () => {
   return (
     <Result
       status="info"
-      title={'Satia Technologies'}
-      subTitle={translate('Do you need an app? or erp/crm/ integrated with payment?')}
+      title={'SATIA LTD'}
+      subTitle={translate('Do you need help concerning this app')}
       extra={
         <>
           <p>
             Website : <a href="https://www.saltiam.com">www.saltiam.com</a>{' '}
           </p>
-         
           <Button
             type="primary"
             onClick={() => {

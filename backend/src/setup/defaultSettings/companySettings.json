@@ -2,7 +2,7 @@
   {
     "settingCategory": "company_settings",
     "settingKey": "company_name",
-    "settingValue": "COMPANY Name",
+    "settingValue": "my-Cloud-app",
     "valueType": "string"
   },
   {
@@ -20,37 +20,37 @@
   {
     "settingCategory": "company_settings",
     "settingKey": "company_address",
-    "settingValue": "25 , Your Company Address",
+    "settingValue": "P.O. BOX 76412-00508",
     "valueType": "string"
   },
   {
     "settingCategory": "company_settings",
     "settingKey": "company_state",
-    "settingValue": "New York",
+    "settingValue": "NAIROBI",
     "valueType": "string"
   },
   {
     "settingCategory": "company_settings",
     "settingKey": "company_country",
-    "settingValue": "United State",
+    "settingValue": "KENYA",
     "valueType": "string"
   },
   {
     "settingCategory": "company_settings",
     "settingKey": "company_email",
-    "settingValue": "youremail@example.com",
+    "settingValue": "dk@saltiam.com",
     "valueType": "string"
   },
   {
     "settingCategory": "company_settings",
     "settingKey": "company_phone",
-    "settingValue": "+1 345234654",
+    "settingValue": "0734523465",
     "valueType": "string"
   },
   {
     "settingCategory": "company_settings",
     "settingKey": "company_website",
-    "settingValue": "www.example.com",
+    "settingValue": "www.saltiam.com",
     "valueType": "string"
   },
   {

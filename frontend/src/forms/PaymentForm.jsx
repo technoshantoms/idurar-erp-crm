@@ -1,23 +1,25 @@
-import React from 'react';
-import dayjs from 'dayjs';
 import { Form, Input, InputNumber } from 'antd';
-import { DatePicker } from 'antd';
-import SelectAsync from '@/components/SelectAsync';
-import { useMoney, useDate } from '@/settings';
+import { useDate, useMoney } from '@/settings';
 
+import { DatePicker } from 'antd';
+import React from 'react';
+import SelectAsync from '@/components/SelectAsync';
+import dayjs from 'dayjs';
 import useLanguage from '@/locale/useLanguage';
+import { generatePaymentId } from '@/utils/helpers';
 
 export default function PaymentForm({ maxAmount = null, isUpdateForm = false }) {
   const translate = useLanguage();
   const { TextArea } = Input;
   const money = useMoney();
   const { dateFormat } = useDate();
+
   return (
     <>
       <Form.Item
-        label={translate('number')}
+        label={translate('Payment No.')}
         name="number"
-        initialValue={1}
+        initialValue={generatePaymentId()}
         rules={[
           {
             required: true,
@@ -25,7 +27,7 @@ export default function PaymentForm({ maxAmount = null, isUpdateForm = false }) 
         ]}
         style={{ width: '50%', float: 'left', paddingRight: '20px' }}
       >
-        <InputNumber min={1} style={{ width: '100%' }} />
+        <Input style={{ width: '100%' }} disabled />
       </Form.Item>
       <Form.Item
         name="date"
@@ -68,10 +70,10 @@ export default function PaymentForm({ maxAmount = null, isUpdateForm = false }) 
           redirectLabel="Add Payment Mode"
         ></SelectAsync>
       </Form.Item>
-      <Form.Item label={translate('Reference')} name="ref">
+      <Form.Item label={translate('Reference Cheque Number')} name="ref">
         <Input />
       </Form.Item>
-      <Form.Item label={translate('Description')} name="description">
+      <Form.Item label={translate('Bank Details')} name="description">
         <TextArea />
       </Form.Item>
     </>

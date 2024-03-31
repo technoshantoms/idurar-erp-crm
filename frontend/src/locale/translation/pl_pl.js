@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "Dodaj nowy podatek",
 account_owner: "Właściciel Konta",
 create_only: "Tylko Tworzenie",
 enter_code: "Wprowadź Kod",
-search:"szukaj"
 }
  export default lang

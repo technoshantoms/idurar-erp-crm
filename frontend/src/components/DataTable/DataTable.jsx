@@ -1,28 +1,22 @@
-import { useCallback, useEffect } from 'react';
-
+import { Button, Dropdown, Input, Table } from 'antd';
 import {
-  EyeOutlined,
-  EditOutlined,
   DeleteOutlined,
+  EditOutlined,
   EllipsisOutlined,
+  EyeOutlined,
   RedoOutlined,
-  ArrowRightOutlined,
-  ArrowLeftOutlined,
 } from '@ant-design/icons';
-import { Dropdown, Table, Button, Input } from 'antd';
+import { useCallback, useEffect } from 'react';
+import { useDate, useMoney } from '@/settings';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { PageHeader } from '@ant-design/pro-layout';
-
-import { useSelector, useDispatch } from 'react-redux';
 import { crud } from '@/redux/crud/actions';
-import { selectListItems } from '@/redux/crud/selectors';
-import useLanguage from '@/locale/useLanguage';
 import { dataForTable } from '@/utils/dataStructure';
-import { useMoney, useDate } from '@/settings';
-
+import { selectListItems } from '@/redux/crud/selectors';
 import { generate as uniqueId } from 'shortid';
-
 import { useCrudContext } from '@/context/crud';
-import { selectLangDirection } from '@/redux/translate/selectors';
+import useLanguage from '@/locale/useLanguage';
 
 function AddNewItem({ config }) {
   const { crudContextAction } = useCrudContext();
@@ -176,20 +170,17 @@ export default function DataTable({ config, extra = [] }) {
     };
   }, []);
 
-  const langDirection=useSelector(selectLangDirection)
-
   return (
     <>
       <PageHeader
         onBack={() => window.history.back()}
-        backIcon={langDirection==="rtl"?<ArrowRightOutlined/>:<ArrowLeftOutlined />}
         title={DATATABLE_TITLE}
         ghost={false}
         extra={[
           <Input
             key={`searchFilterDataTable}`}
             onChange={filterTable}
-            placeholder={translate('search')}
+            placeholder={translate('Search')}
             allowClear
           />,
           <Button onClick={handelDataTableLoad} key={`${uniqueId()}`} icon={<RedoOutlined />}>
@@ -200,7 +191,6 @@ export default function DataTable({ config, extra = [] }) {
         ]}
         style={{
           padding: '20px 0px',
-          direction:langDirection
         }}
       ></PageHeader>
 

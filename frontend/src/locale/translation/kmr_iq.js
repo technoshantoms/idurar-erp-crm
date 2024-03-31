@@ -452,6 +452,5 @@ ajouter_une_nouvelle_taxe: "زیادکردنی هەڵبژاردنی نوێ",
 account_owner: "Mijarvan",
 create_only: "Tenê Vekin",
 enter_code: "Koda Vebin",
-search:"gerr"
 }
  export default lang

@@ -1,24 +1,19 @@
-import { useState } from 'react';
-import { DatePicker, Input, Form, Select, InputNumber, Switch, Tag } from 'antd';
+import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
+import { DatePicker, Form, Input, InputNumber, Select, Switch, Tag } from 'antd';
+import { useDate, useMoney } from '@/settings';
 
-import { CloseOutlined, CheckOutlined } from '@ant-design/icons';
-import useLanguage from '@/locale/useLanguage';
-import { useMoney, useDate } from '@/settings';
 import AutoCompleteAsync from '@/components/AutoCompleteAsync';
 import SelectAsync from '@/components/SelectAsync';
-import { generate as uniqueId } from 'shortid';
 import SelectCurrency from '@/components/SelectCurrency';
-
 import { countryList } from '@/utils/countryList';
-import { selectLangDirection } from '@/redux/translate/selectors';
-import { useSelector } from 'react-redux';
+import { generate as uniqueId } from 'shortid';
+import useLanguage from '@/locale/useLanguage';
+import { useState } from 'react';
 
 export default function DynamicForm({ fields, isUpdateForm = false }) {
   const [feedback, setFeedback] = useState();
-  const langDirection=useSelector(selectLangDirection)
-
   return (
-    <div style={{direction:langDirection}}>
+    <>
       {Object.keys(fields).map((key) => {
         let field = fields[key];
 
@@ -45,7 +40,7 @@ export default function DynamicForm({ fields, isUpdateForm = false }) {
           }
         }
       })}
-    </div>
+    </>
   );
 }
 
@@ -367,6 +362,7 @@ function FormElement({ field, feedback, setFeedback }) {
     // object: 'object',
     // enum: 'enum',
     // date: 'date',
+    address: 'address',
     url: 'url',
     website: 'url',
     email: 'email',

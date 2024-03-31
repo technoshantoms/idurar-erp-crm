@@ -2,13 +2,13 @@
   {
     "settingCategory": "email_settings",
     "settingKey": "email_domain",
-    "settingValue": "cigniti.com",
+    "settingValue": "saltiam.com",
     "valueType": "string"
   },
   {
     "settingCategory": "email_settings",
     "settingKey": "email_reply_to",
-    "settingValue": "reply@cigniti.com",
+    "settingValue": "kipruto@saltiam.com",
     "valueType": "string"
   },
   {

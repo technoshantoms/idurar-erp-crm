@@ -1,8 +1,6 @@
 import { Form, Input, InputNumber, Select, Switch } from 'antd';
 import { CloseOutlined, CheckOutlined } from '@ant-design/icons';
 import useLanguage from '@/locale/useLanguage';
-import { useSelector } from 'react-redux';
-import { selectLangDirection } from '@/redux/translate/selectors';
 
 const formItems = [
   {
@@ -49,10 +47,8 @@ const formItems = [
 
 export default function SettingForm() {
   const translate = useLanguage();
-  const langDirection=useSelector(selectLangDirection)
-
   return (
-    <div style={{direction:langDirection}}>
+    <>
       {formItems.map((item) => {
         return (
           <Form.Item
@@ -83,6 +79,6 @@ export default function SettingForm() {
           </Form.Item>
         );
       })}
-    </div>
+    </>
   );
 }

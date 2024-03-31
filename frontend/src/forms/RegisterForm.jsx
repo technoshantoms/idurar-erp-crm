@@ -20,7 +20,7 @@ export default function RegisterForm({ userLocation }) {
         ]}
       >
         <Input prefix={<UserOutlined className="site-form-item-icon" />} 
-         size="large" 
+         size="medium" 
          placeholder={translate('name')}
         />
 
@@ -41,7 +41,7 @@ export default function RegisterForm({ userLocation }) {
           prefix={<MailOutlined className="site-form-item-icon" />}
           placeholder={translate('email')}
           type="email"
-          size="large"
+          size="medium"
         />
       </Form.Item>
       <Form.Item
@@ -53,11 +53,11 @@ export default function RegisterForm({ userLocation }) {
           },
         ]}
       >
-        <Input.Password prefix={<LockOutlined className="site-form-item-icon" />} size="large" 
+        <Input.Password prefix={<LockOutlined className="site-form-item-icon" />} size="medium" 
         placeholder={translate('password')}
         />
       </Form.Item>
-      {/* <Form.Item
+      <Form.Item
         name="confirm_password"
         label={translate('confirm_password')}
         rules={[
@@ -75,8 +75,10 @@ export default function RegisterForm({ userLocation }) {
         ]}
         hasFeedback
       >
-        <Input.Password prefix={<LockOutlined className="site-form-item-icon" />} size="large" />
-      </Form.Item> */}
+        <Input.Password prefix={<LockOutlined className="site-form-item-icon" />} size="medium" 
+        placeholder={translate('confirm_password')}
+        />
+      </Form.Item> 
       <Form.Item
         label={translate('country')}
         name="country"
@@ -98,9 +100,9 @@ export default function RegisterForm({ userLocation }) {
             (optionA?.label ?? '').toLowerCase().startsWith((optionB?.label ?? '').toLowerCase())
           }
           style={{
-            width: '100%',
+            width: '50%',
           }}
-          size="large"
+          size="small"
         >
           {countryList.map((language) => (
             <Select.Option
