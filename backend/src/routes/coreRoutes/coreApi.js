@@ -13,7 +13,13 @@ const { singleStorageUpload } = require('@/middlewares/uploadMiddleware');
 const { hasPermission } = require('@/middlewares/permission');
 // //_______________________________ Admin management_______________________________
 
-router.route('/admin/create').post(hasPermission(), catchErrors(adminController.create));
+router
+  .route('/admin/create')
+  .post(
+    hasPermission(),
+    singleStorageUpload({ entity: 'setting', fieldName: 'photo', fileType: 'image' }),
+    catchErrors(adminController.create)
+  );
 router.route('/admin/read/:id').get(hasPermission('read'), catchErrors(adminController.read));
 router.route('/admin/update/:id').patch(
   hasPermission(),
@@ -38,7 +44,9 @@ router
   .route('/admin/profile/update')
   .patch(
     hasPermission('update'),
-    singleStorageUpload({ entity: 'admin', fieldName: 'photo', fileType: 'image' }),
+    catchErrors(
+      catchErrors(singleStorageUpload({ entity: 'admin', fieldName: 'photo', fileType: 'image' }))
+    ),
     catchErrors(adminController.updateProfile)
   );
 

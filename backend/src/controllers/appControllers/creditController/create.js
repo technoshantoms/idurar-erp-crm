@@ -1,12 +1,14 @@
 const mongoose = require('mongoose');
 
-const Model = mongoose.model('Payment');
+const Model = mongoose.model('Credit');
 const Invoice = mongoose.model('Invoice');
 const custom = require('@/controllers/pdfController');
 
 const { calculate } = require('@/helpers');
 
 const create = async (req, res) => {
+  debugger;
+  console.log(req.body);
   // Creating a new document in the collection
   if (req.body.amount === 0) {
     return res.status(202).json({
@@ -41,7 +43,7 @@ const create = async (req, res) => {
 
   const result = await Model.create(req.body);
 
-  const fileId = 'payment-' + result._id + '.pdf';
+  const fileId = 'credit-' + result._id + '.pdf';
   const updatePath = await Model.findOneAndUpdate(
     {
       _id: result._id.toString(),

@@ -1,22 +1,16 @@
 const createCRUDController = require('@/controllers/middlewaresControllers/createCRUDController');
-const methods = createCRUDController('Invoice');
+const methods = createCRUDController('Credit');
 
-const sendMail = require('./sendMail');
 const create = require('./create');
-const search = require('./search');
 const summary = require('./summary');
 const update = require('./update');
 const remove = require('./remove');
-const paginatedList = require('./paginatedList');
-const read = require('./read');
+const sendMail = require('./sendMail');
 
 methods.mail = sendMail;
 methods.create = create;
-methods.search = search;
 methods.update = update;
 methods.delete = remove;
 methods.summary = summary;
-methods.list = paginatedList;
-methods.read = read;
 
 module.exports = methods;

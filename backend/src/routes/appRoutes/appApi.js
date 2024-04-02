@@ -23,7 +23,13 @@ const routerApp = (entity, controller) => {
   router.route(`/${entity}/filter`).get(hasPermission('read'), catchErrors(controller['filter']));
   router.route(`/${entity}/summary`).get(hasPermission('read'), catchErrors(controller['summary']));
 
-  if (entity === 'invoice' || entity === 'quote' || entity === 'offer' || entity === 'payment') {
+  if (
+    entity === 'invoice' ||
+    entity === 'quote' ||
+    entity === 'offer' ||
+    entity === 'payment' ||
+    entity === 'credit'
+  ) {
     router.route(`/${entity}/mail`).post(hasPermission('update'), catchErrors(controller['mail']));
   }
 

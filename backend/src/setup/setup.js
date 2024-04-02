@@ -19,7 +19,7 @@ async function setupApp() {
 
     const demoAdmin = {
       email: 'admin@demo.com',
-      name: 'IDURAR',
+      name: 'HOMEPESA',
       surname: 'Admin',
       enabled: true,
       role: 'owner',
@@ -72,11 +72,9 @@ async function setupApp() {
     console.log('👍 PaymentMode created : Done!');
 
     console.log('🥳 Setup completed :Success!');
-    process.exit();
   } catch (e) {
     console.log('\n🚫 Error! The Error info is below');
     console.log(e);
-    process.exit();
   }
 }
 

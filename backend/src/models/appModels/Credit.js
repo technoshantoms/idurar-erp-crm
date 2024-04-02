@@ -1,24 +1,30 @@
 const mongoose = require('mongoose');
 
-const SalaryPaymentSchema = new mongoose.Schema({
+const creditSchema = new mongoose.Schema({
   removed: {
     type: Boolean,
     default: false,
   },
-   branch: { type: mongoose.Schema.ObjectId, ref: 'Branch' },
+  branch: { type: mongoose.Schema.ObjectId, ref: 'Branch' },
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'Admin', autopopulate: true, required: true },
-  employee: {
+  number: {
+    type: String,
+    required: true,
+  },
+  client: {
     type: mongoose.Schema.ObjectId,
-    ref: 'Employee',
+    ref: 'Client',
     autopopulate: true,
     required: true,
   },
-  salary: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Salary',
-    required: true,
-    autopopulate: true,
-  },
+  invoice: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: 'Invoice',
+      required: true,
+      autopopulate: true,
+    },
+  ],
   date: {
     type: Date,
     default: Date.now,
@@ -26,6 +32,11 @@ const SalaryPaymentSchema = new mongoose.Schema({
   },
   amount: {
     type: Number,
+    required: true,
+  },
+  currency: {
+    type: String,
+    uppercase: true,
     required: true,
   },
   paymentMode: {
@@ -36,7 +47,6 @@ const SalaryPaymentSchema = new mongoose.Schema({
   ref: {
     type: String,
   },
-  receipt: String,
   description: {
     type: String,
   },
@@ -49,5 +59,5 @@ const SalaryPaymentSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
-SalaryPaymentSchema.plugin(require('mongoose-autopopulate'));
-module.exports = mongoose.model('SalaryPayment', SalaryPaymentSchema);
+creditSchema.plugin(require('mongoose-autopopulate'));
+module.exports = mongoose.model('Credit', creditSchema);
