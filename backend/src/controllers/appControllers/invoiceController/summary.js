@@ -34,8 +34,6 @@ const summary = async (req, res) => {
   let endDate = currentDate.clone().endOf(defaultType);
 
   const statuses = ['draft', 'pending', 'overdue', 'paid', 'unpaid', 'partially'];
-  const documentType = ['invoice', 'debit memo', 'credit memo'];
-
 
   const response = await Model.aggregate([
     {

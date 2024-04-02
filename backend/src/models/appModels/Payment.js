@@ -5,10 +5,10 @@ const paymentSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  branch: { type: mongoose.Schema.ObjectId, ref: 'Branch' },
+
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'Admin', autopopulate: true, required: true },
   number: {
-    type: String,
+    type: Number,
     required: true,
   },
   client: {
@@ -17,12 +17,12 @@ const paymentSchema = new mongoose.Schema({
     autopopulate: true,
     required: true,
   },
-  invoice: [{
+  invoice: {
     type: mongoose.Schema.ObjectId,
     ref: 'Invoice',
     required: true,
     autopopulate: true,
-  }],
+  },
   date: {
     type: Date,
     default: Date.now,

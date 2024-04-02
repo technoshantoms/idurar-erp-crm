@@ -1,8 +1,6 @@
 const { migrate } = require('./migrate');
 
 const search = async (Model, req, res) => {
-  // debugger;
-  // console.log("you are here");
   // console.log(req.query.fields)
   // if (req.query.q === undefined || req.query.q.trim() === '') {
   //   return res

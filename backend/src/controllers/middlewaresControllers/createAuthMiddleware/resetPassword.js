@@ -114,10 +114,10 @@ const resetPassword = async (req, res, { userModel }) => {
       .status(200)
       .cookie('token', token, {
         maxAge: 24 * 60 * 60 * 1000,
-        sameSite: 'none',
+        sameSite: 'Lax',
         httpOnly: true,
-        secure: true,
-        // domain: 'https://flourishing-lebkuchen-cigniti.netlify.app',
+        secure: false,
+        domain: req.hostname,
         path: '/',
         Partitioned: true,
       })

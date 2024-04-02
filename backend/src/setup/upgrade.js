@@ -34,9 +34,6 @@ async function upgrade() {
     const Payment = require('../models/appModels/Payment');
     await Payment.updateMany({ removed: false }, { currency: currency_code });
 
-    const Credit = require('../models/appModels/Credit');
-    await Credit.updateMany({ removed: false }, { currency: currency_code });
-
     console.log('🥳 Upgrade completed :Success!');
     process.exit();
   } catch (e) {

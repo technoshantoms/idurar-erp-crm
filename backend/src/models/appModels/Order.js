@@ -9,7 +9,7 @@ const orderSchema = new mongoose.Schema({
     type: Boolean,
     default: true,
   },
-  branch: { type: mongoose.Schema.ObjectId, ref: 'Branch' },
+
   createdBy: {
     type: mongoose.Schema.ObjectId,
     ref: 'Admin',

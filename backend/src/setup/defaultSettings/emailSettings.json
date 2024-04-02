@@ -2,19 +2,19 @@
   {
     "settingCategory": "email_settings",
     "settingKey": "email_domain",
-    "settingValue": "saltiam.com",
+    "settingValue": "idurarapp.com",
     "valueType": "string"
   },
   {
     "settingCategory": "email_settings",
     "settingKey": "email_reply_to",
-    "settingValue": "kipruto@saltiam.com",
+    "settingValue": "reply@idurarapp.com",
     "valueType": "string"
   },
   {
     "settingCategory": "email_settings",
     "settingKey": "email_from",
-    "settingValue": "CIGNITI ERP CRM",
+    "settingValue": "IDURAR ERP CRM",
     "valueType": "string"
   }
 ]
