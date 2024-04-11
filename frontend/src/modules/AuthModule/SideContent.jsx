@@ -27,14 +27,14 @@ export default function SideContent() {
           width={220}
         />
         <div className="space40"></div>
-        <Title level={3}>Homepesa (CLOUD HOSTED) is open for use by companies, churches, & and SACCOs:</Title>
+        <Title level={3}>Homepesa (CLOUD HOSTED) is open for use by Entities such as SACCOs [e.g.Homepesa SACCO], companies, Churches, & sole-proprietors:</Title>
         <div className="space20"></div>
         <ul className="list-checked">
           <li className="list-checked-item">
             <Space direction="vertical">
               <Text strong>{translate('All-in-one tool')}</Text>
 
-              <Text>This multi-currency paymeny,erp, & crm software is mainatined by: www.saltiam.com}</Text>
+              <Text>This multi-currency paymeny,erp, & crm software is mainatined by: www.saltiam.com</Text>
             </Space>
           </li>
 

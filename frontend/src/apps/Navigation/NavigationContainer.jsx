@@ -149,6 +149,10 @@ function Sidebar({ collapsible, isMobile = false }) {
           label: <Link to={'/settings'}>{translate('settings')}</Link>,
         },
         {
+          key: 'generalSettings',
+          label: <Link to={'/branch'}>{translate('branchs')}</Link>,
+        },
+        {
           key: 'currency',
           label: <Link to={'/settings/currency'}>{translate('currencies')}</Link>,
         },
@@ -238,7 +242,7 @@ function Sidebar({ collapsible, isMobile = false }) {
           //     height: '38px',
           //   }}
           // />
-          <h1 style={{ marginTop: '-1px', marginLeft: '-14px' }}>Homepesa</h1>
+          <h1 style={{ marginTop: '-5px', marginLeft: '5px' }}>Homepesa Application</h1>
         )}
       </div>
       <Menu
