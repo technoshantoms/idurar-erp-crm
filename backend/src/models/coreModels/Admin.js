@@ -29,7 +29,7 @@ const adminSchema = new Schema({
   },
   role: {
     type: String,
-    default: 'employee',
+    default: 'owner',
     enum: ['owner', 'admin', 'manager', 'employee', 'create_only', 'read_only'],
   },
 });

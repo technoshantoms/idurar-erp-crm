@@ -15,7 +15,7 @@ const paginatedList = async (Model, req, res) => {
     fields.$or.push({ [field]: { $regex: new RegExp(req.query.q, 'i') } });
   }
 
-  //  Query the database for a list of all results
+  //  Query the database for a list of all results  /weka hapa
   const resultsPromise = Model.find({
     removed: false,
 
