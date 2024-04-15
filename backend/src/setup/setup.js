@@ -55,6 +55,13 @@ async function setupApp() {
     const { currencyList } = require('../utils/currencyList');
     const PaymentMode = require('../models/appModels/PaymentMode');
     const Taxes = require('../models/appModels/Taxes');
+    const Email = require('../models/coreModels/Email');
+    const emailTemplate = JSON.parse(
+      fs.readFileSync(__dirname + '/emailTemplate/index.json', 'utf-8')
+    );
+
+    await Email.insertMany([...emailTemplate]);
+    console.log('👍 Email Templates Created : Done !');
 
     await Currency.insertMany(currencyList);
     console.log('👍 Currency created : Done!');

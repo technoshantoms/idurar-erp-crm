@@ -23,8 +23,8 @@ export default function SideContent() {
           src={logo}
           alt="CIGNITI ERP CRM"
           style={{ margin: '0 auto 40px', display: 'block' }}
-          height={63}
-          width={220}
+          height={110}
+          width={320}
         />
         <div className="space40"></div>
         <Title level={3}>Homepesa (CLOUD HOSTED) is open for use by Entities such as SACCOs [e.g.Homepesa SACCO], companies, Churches, & sole-proprietors:</Title>
