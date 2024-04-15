@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 exports.getData = ({ model }) => {
   const Model = mongoose.model(model);
-  const result = Model.find({ removed: false, enabled: true });
+  const result = Model.find({ removed: false, enabled: true}); //, enabled: true
   return result;
 };
 

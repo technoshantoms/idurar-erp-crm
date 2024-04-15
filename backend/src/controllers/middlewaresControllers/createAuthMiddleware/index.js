@@ -1,6 +1,7 @@
 const isValidAuthToken = require('./isValidAuthToken');
 const login = require('./login');
 const register = require('./register');
+const verify = require('./verify');
 const logout = require('./logout');
 const forgetPassword = require('./forgetPassword');
 const resetPassword = require('./resetPassword');

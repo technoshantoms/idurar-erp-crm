@@ -4,6 +4,11 @@ import useLanguage from '@/locale/useLanguage';
 
 const formItems = [
   {
+    label: 'mutli_branch',
+    settingKey: 'company_has_mutli_branch',
+    valueType: 'boolean',
+  },
+  {
     settingKey: 'company_name',
     valueType: 'string',
   },
