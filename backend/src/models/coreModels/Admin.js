@@ -17,7 +17,7 @@ const adminSchema = new Schema({
     trim: true,
     required: true,
   },
-  name: { type: String, required: true },
+  name: { type: String, required: true,},
   surname: { type: String },
   photo: {
     type: String,
@@ -29,9 +29,11 @@ const adminSchema = new Schema({
   },
   role: {
     type: String,
+    required: true,
+    unique: true,
     default: 'owner',
     enum: ['owner', 'admin', 'manager', 'employee', 'create_only', 'read_only'],
   },
 });
-
+adminSchema.index({ role: 1 }, { unique: true });
 module.exports = mongoose.model('Admin', adminSchema);
