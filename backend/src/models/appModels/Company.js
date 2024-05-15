@@ -212,6 +212,6 @@ const schema = new mongoose.Schema({
     default: false,
   },
 });
-schema.index({ name: 1 }, { unique: false });
+
 schema.plugin(require('mongoose-autopopulate'));
 module.exports = mongoose.model('Company', schema);

@@ -13,7 +13,7 @@ const adminAuth = require('./controllers/coreControllers/adminAuth');
 
 const errorHandlers = require('./handlers/errorHandlers');
 const erpApiRouter = require('./routes/appRoutes/appApi');
-//const rateLimit = require('express-rate-limit');
+const rateLimit = require('express-rate-limit');
 const useLanguage = require('@/locale/useLanguage');
 const fileUpload = require('express-fileupload');
 // create our Express app

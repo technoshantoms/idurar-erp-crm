@@ -12,7 +12,6 @@ const schema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
   },
   manager: { type: mongoose.Schema.ObjectId, ref: 'Manager', required: true },
   admin: { type: mongoose.Schema.ObjectId, ref: 'Admin', required: true },
@@ -132,5 +131,5 @@ const schema = new mongoose.Schema({
     default: false,
   },
 });
-schema.index({ name: 1 }, { unique: true });
+
 module.exports = mongoose.model('Branch', schema);
