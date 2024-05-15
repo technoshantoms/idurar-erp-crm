@@ -3,7 +3,9 @@
     "settingCategory": "lead_settings",
     "settingKey": "lead_type",
     "settingValue": ["person", "company"],
-    "valueType": "array"
+    "valueType": "array",
+    "isCoreSetting": true,
+    "isPrivate": false
   },
   {
     "settingCategory": "lead_settings",
@@ -22,13 +24,17 @@
       "website",
       "twitter"
     ],
-    "valueType": "array"
+    "valueType": "array",
+    "isCoreSetting": true,
+    "isPrivate": false
   },
   {
     "settingCategory": "lead_settings",
     "settingKey": "lead_status",
     "settingValue": ["draft", "new", "reached", "waiting", "in negosation", "won", "loose"],
-    "valueType": "array"
+    "valueType": "array",
+    "isCoreSetting": true,
+    "isPrivate": false
   },
   {
     "settingCategory": "lead_settings",
@@ -42,20 +48,24 @@
       "retails",
       "cafe & restaurant"
     ],
-    "valueType": "array"
+    "valueType": "array",
+    "isCoreSetting": true,
+    "isPrivate": false
   },
   {
     "settingCategory": "lead_settings",
     "settingKey": "offer_default_lead_type",
     "settingValue": "company",
-    "valueType": "string"
+    "valueType": "string",
+    "isCoreSetting": true,
+    "isPrivate": false
   },
   {
     "settingCategory": "lead_settings",
     "settingKey": "lead_email_imap_server",
     "settingValue": "mail.idurarapp.com",
     "valueType": "string",
-
+    "isCoreSetting": true,
     "isPrivate": true
   },
   {
@@ -63,7 +73,7 @@
     "settingKey": "lead_email_imap_username",
     "settingValue": "hello@idurarapp.com",
     "valueType": "string",
-
+    "isCoreSetting": true,
     "isPrivate": true
   },
   {
@@ -71,7 +81,7 @@
     "settingKey": "lead_email_imap_password",
     "settingValue": "password",
     "valueType": "string",
-
+    "isCoreSetting": true,
     "isPrivate": true
   },
   {
@@ -79,7 +89,7 @@
     "settingKey": "lead_email_imap_port",
     "settingValue": 993,
     "valueType": "number",
-
+    "isCoreSetting": true,
     "isPrivate": true
   }
 ]

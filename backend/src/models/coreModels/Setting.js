@@ -23,7 +23,7 @@ const settingSchema = new mongoose.Schema({
   },
   settingValue: {
     type: mongoose.Schema.Types.Mixed,
-    required: true,
+    
   },
   valueType: {
     type: String,

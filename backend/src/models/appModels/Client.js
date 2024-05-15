@@ -9,7 +9,7 @@ const schema = new mongoose.Schema({
     type: Boolean,
     default: true,
   },
-  branchs: [{ type: mongoose.Schema.ObjectId, ref: 'Branch' }],
+  branches: [{ type: mongoose.Schema.ObjectId, ref: 'Branch' }],
   type: {
     type: String,
     default: 'company',
@@ -37,7 +37,7 @@ const schema = new mongoose.Schema({
     default: Date.now,
   },
 });
-
+schema.index({ branches: 1 }, { unique: true });
 schema.plugin(require('mongoose-autopopulate'));
 
 module.exports = mongoose.model('Client', schema);
