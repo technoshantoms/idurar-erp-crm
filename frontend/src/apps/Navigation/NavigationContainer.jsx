@@ -150,17 +150,17 @@ function Sidebar({ collapsible, isMobile = false }) {
         },
         {
           key: 'generalSettings',
-          label: <Link to={'/branch'}>{translate('branchs')}</Link>,
+          label: <Link to={'/branch'}>{translate('branches')}</Link>,
         },
         {
           key: 'currency',
           label: <Link to={'/settings/currency'}>{translate('currencies')}</Link>,
         },
 
-        // {
-        //   key: 'emailTemplates',
-        //   label: <Link to={'/email'}>{translate('email_templates')}</Link>,
-        // },
+       {
+         key: 'emailTemplates',
+         label: <Link to={'/email'}>{translate('email_templates')}</Link>,
+        },
         {
           key: 'paymentMode',
           label: <Link to={'/payment/mode'}>{translate('payments_mode')}</Link>,

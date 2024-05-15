@@ -28,7 +28,7 @@ export default function AuthRouter() {
     <Routes>
       <Route element={<Register />} path="/" />
       <Route element={<Login />} path="/login" />
-      <Route element={<Navigate to="/logout" replace />} path="/logout" />
+      <Route element={<Navigate to="/login" replace />} path="/logout" />
       <Route element={<Register />} path="/register" />
       <Route element={<ForgetPassword />} path="/forgetpassword" />
       <Route element={<Verify />} path="/verify/:userId/:emailToken" />

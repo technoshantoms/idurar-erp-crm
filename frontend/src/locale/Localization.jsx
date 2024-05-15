@@ -29,7 +29,7 @@ export default function Localization({ children }) {
           // algorithm: theme.darkAlgorithm,
           token: {
             colorPrimary: '#287208',
-            colorLink: '#87208',
+            colorLink: '#2f8a07',
             borderRadius: 8,
           },
         }}

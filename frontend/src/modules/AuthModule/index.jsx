@@ -25,8 +25,8 @@ const AuthModule = ({ authContent, AUTH_TITLE, isForRegistre = false }) => {
       </Content>
       <Content
         style={{
-          padding: isForRegistre ? '40px 30px 30px' : '100px 30px 30px',
-          maxWidth: '440px',
+          padding: isForRegistre ? '40px 20px 20px' : '10px 50px 40px',
+          maxWidth: '400px',
           margin: '0 auto',
         }}
       >
@@ -38,8 +38,8 @@ const AuthModule = ({ authContent, AUTH_TITLE, isForRegistre = false }) => {
               margin: '0px auto 20px',
               display: 'block',
             }}
-            height={63}
-            width={220}
+            height={130}
+            width={270}
           />
           <div className="space10" />
         </Col>
