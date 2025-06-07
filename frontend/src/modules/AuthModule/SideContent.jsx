@@ -21,20 +21,20 @@ export default function SideContent() {
       <div style={{ width: '100%' }}>
         <img
           src={logo}
-          alt="CIGNITI ERP CRM"
+          alt="ERP-CRM APP"
           style={{ margin: '0 auto 40px', display: 'block' }}
-          height={170}
-          width={250}
+          height={350}
+          width={350}
         />
         <div className="space40"></div>
-        <Title level={3}>Homepesa (CLOUD HOSTED) is open for use by Entities such as SACCOs [e.g.Homepesa SACCO], companies, Churches, & sole-proprietors:</Title>
+        <Title level={3}>ERP-CRM APP for your organisation</Title>
         <div className="space20"></div>
         <ul className="list-checked">
           <li className="list-checked-item">
             <Space direction="vertical">
               <Text strong>{translate('All-in-one tool')}</Text>
 
-              <Text>This multi-currency paymeny,erp, & crm software is mainatined by: www.saltiam.com</Text>
+              <Text>This multi-currency paymeny,erp, & crm software is mainatined by: www.homepesa.com</Text>
             </Space>
           </li>
 

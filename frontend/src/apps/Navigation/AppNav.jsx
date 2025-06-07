@@ -82,11 +82,11 @@ const AppNav = ({ translate }) => [
     icon: <TagsOutlined />,
     label: <Link to={'/category/product'}>{translate('product_category')}</Link>,
   },
-  // {
-  //   key: 'employee',
-  //   icon: <UserOutlined />,
-  //   label: <Link to={'/employee'}>{translate('employee')}</Link>,
-  // },
+  {
+    key: 'employee',
+    icon: <UserOutlined />,
+    label: <Link to={'/employee'}>{translate('employee')}</Link>,
+  },
 
   {
     label: translate('Settings'),
@@ -96,7 +96,12 @@ const AppNav = ({ translate }) => [
       {
         key: 'admin',
         // icon: <TeamOutlined />,
-        label: <Link to={'/admin'}>{translate('Staff')}</Link>,
+        label: <Link to={'/admin'}>{translate('Admin')}</Link>,
+      },
+      {
+        key: 'branch',
+        // icon: <TeamOutlined />,
+        label: <Link to={'/branch'}>{translate('branch')}</Link>,
       },
       {
         key: 'generalSettings',
@@ -106,10 +111,10 @@ const AppNav = ({ translate }) => [
         key: 'expensesCategory',
         label: <Link to={'/category/expenses'}>{translate('expenses_Category')}</Link>,
       },
-      // {
-      //   key: 'emailTemplates',
-      //   label: <Link to={'/email'}>{translate('email_templates')}</Link>,
-      // },
+      {
+        key: 'emailTemplates',
+        label: <Link to={'/email'}>{translate('email_templates')}</Link>,
+      },
       {
         key: 'paymentMode',
         label: <Link to={'/payment/mode'}>{translate('payment_mode')}</Link>,
@@ -122,10 +127,10 @@ const AppNav = ({ translate }) => [
         key: 'about',
         label: <Link to={'/about'}>{translate('about')}</Link>,
       },
-      // {
-      //   key: 'advancedSettings',
-      //   label: <Link to={'/settings/advanced'}>{translate('advanced_settings')}</Link>,
-      // },
+      {
+        key: 'advancedSettings',
+        label: <Link to={'/settings/advanced'}>{translate('advanced_settings')}</Link>,
+      },
     ],
   },
 ];

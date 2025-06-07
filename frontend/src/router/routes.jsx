@@ -213,6 +213,10 @@ let routes = {
       element: <AdvancedSettings />,
     },
     {
+      path: '/branch',
+      element: <AdvancedSettings />,
+    },
+    {
       path: '/profile',
       element: <Profile />,
     },

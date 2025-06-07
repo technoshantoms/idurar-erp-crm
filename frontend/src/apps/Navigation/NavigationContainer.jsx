@@ -66,7 +66,7 @@ function Sidebar({ collapsible, isMobile = false }) {
     {
       key: 'company',
       icon: <ShopOutlined />,
-      label: <Link to={'/company'}>{translate('Enquiries')}</Link>,
+      label: <Link to={'/company'}>{translate('Companies')}</Link>,
     },
     {
       key: 'lead',
@@ -76,7 +76,7 @@ function Sidebar({ collapsible, isMobile = false }) {
     {
       key: 'offer',
       icon: <FileOutlined />,
-      label: <Link to={'/offer'}>{translate('Discounts')}</Link>,
+      label: <Link to={'/offer'}>{translate('Offers')}</Link>,
     },
     {
       key: 'invoice',
@@ -128,11 +128,11 @@ function Sidebar({ collapsible, isMobile = false }) {
       icon: <ReconciliationOutlined />,
       label: <Link to={'/category/expenses'}>{translate('expenses_Category')}</Link>,
     },
-    // {
-    //   key: 'employee',
-    //   icon: <UserOutlined />,
-    //   label: <Link to={'/employee'}>{translate('employee')}</Link>,
-    // },
+    {
+      key: 'employee',
+      icon: <UserOutlined />,
+      label: <Link to={'/employee'}>{translate('employee')}</Link>,
+    },
 
     {
       label: translate('Settings'),
@@ -142,15 +142,16 @@ function Sidebar({ collapsible, isMobile = false }) {
         {
           key: 'admin',
           // icon: <TeamOutlined />,
-          label: <Link to={'/admin'}>{translate('admin')}</Link>,
+          label: <Link to={'/admin'}>{translate('Admin')}</Link>,
+        },
+        {
+          key: 'branch',
+          // icon: <TeamOutlined />,
+          label: <Link to={'/branch'}>{translate('branch')}</Link>,
         },
         {
           key: 'generalSettings',
           label: <Link to={'/settings'}>{translate('settings')}</Link>,
-        },
-        {
-          key: 'generalSettings',
-          label: <Link to={'/branch'}>{translate('branches')}</Link>,
         },
         {
           key: 'currency',
@@ -242,7 +243,7 @@ function Sidebar({ collapsible, isMobile = false }) {
           //     height: '38px',
           //   }}
           // />
-          <h1 style={{ marginTop: '-5px', marginLeft: '5px' }}>Homepesa Application</h1>
+          <h1 style={{ marginTop: '-5px', marginLeft: '5px' }}>CRM/ERP/HR App</h1>
         )}
       </div>
       <Menu

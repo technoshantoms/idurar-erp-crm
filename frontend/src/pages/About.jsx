@@ -12,12 +12,12 @@ const About = () => {
       extra={
         <>
           <p>
-            Website : <a href="https://www.saltiam.com">www.saltiam.com</a>{' '}
+            Website : <a href="https://www.homepesa.com">www.homepesa.com</a>{' '}
           </p>
           <Button
             type="primary"
             onClick={() => {
-              window.open(`https://www.saltiam.com/`);
+              window.open(`https://www.homepesa.com/`);
             }}
           >
             {translate('Contact us')}

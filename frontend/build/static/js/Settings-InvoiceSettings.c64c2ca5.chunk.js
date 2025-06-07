@@ -1,2 +1,0 @@
-(this["webpackJsonperp-crm"]=this["webpackJsonperp-crm"]||[]).push([[20],{187:function(e,n,r){"use strict";r.r(n),r.d(n,"default",(function(){return c}));var t=r(5);function c(){return Object(t.jsx)("p",{children:"Invoice Settings here"})}}}]);
-//# sourceMappingURL=Settings-InvoiceSettings.c64c2ca5.chunk.js.map

@@ -435,7 +435,7 @@ const lang = {
   contact_us: 'Contact Us',
   customers: 'Customers',
   peoples: 'Peoples',
-  companies: 'Enquiries',
+  companies: 'companies',
   leads: 'Leads',
   offer_leads: 'Offer Leads',
   invoices: 'Invoices',
@@ -448,8 +448,9 @@ const lang = {
   payments_mode: 'Payments Mode',
   account_owner: 'Account Owner',
   create_only: 'Create Only',
+  branches: 'branch',
   enter_code: 'Enter Code',
-  offers: 'Discounts',
+  offers: 'Offers',
   proforma_invoices: 'Proforma Invoices',
 };
 
