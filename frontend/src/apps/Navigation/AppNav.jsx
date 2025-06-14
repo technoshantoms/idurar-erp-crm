@@ -124,8 +124,8 @@ const AppNav = ({ translate }) => [
         label: <Link to={'/taxes'}>{translate('taxes')}</Link>,
       },
       {
-        key: 'about',
-        label: <Link to={'/about'}>{translate('about')}</Link>,
+        key: 'subscription',
+        label: <Link to={'/subscription'}>{translate('subscription')}</Link>,
       },
       {
         key: 'advancedSettings',

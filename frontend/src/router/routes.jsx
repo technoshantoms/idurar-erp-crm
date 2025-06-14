@@ -49,7 +49,7 @@ const Product = lazy(() => import('@/pages/Product'));
 const People = lazy(() => import('@/pages/People'));
 const Company = lazy(() => import('@/pages/Company'));
 
-const About = lazy(() => import('@/pages/About'));
+const Subscription = lazy(() => import('@/pages/Subscription'));
 const Currency = lazy(() => import('@/pages/Currency'));
 
 let routes = {
@@ -72,8 +72,8 @@ let routes = {
       element: <Logout />,
     },
     {
-      path: '/about',
-      element: <About />,
+      path: '/subscription',
+      element: <Subscription />,
     },
     {
       path: '/',
